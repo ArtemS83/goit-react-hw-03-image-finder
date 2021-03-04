@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import ContactItem from '../ContactItem';
+import ContactItem from '../ImageGalleryItem';
 // import style from './Contacts.module.scss';
 import { createUseStyles } from 'react-jss';
 
