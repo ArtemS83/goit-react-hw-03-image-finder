@@ -5,8 +5,9 @@ import { createUseStyles } from 'react-jss';
 const useStyles = createUseStyles({
   title: {
     marginTop: 20,
-    fontSize: 20,
+    fontSize: 30,
     color: 'red',
+    textAlign: 'center',
   },
 });
 

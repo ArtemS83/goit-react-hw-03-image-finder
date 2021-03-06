@@ -1,13 +1,17 @@
 import PropTypes from 'prop-types';
 import style from './Button.module.scss';
 
-const Button = ({ title, type, id, onDelete }) => {
-  const hendelClick = () => onDelete(id);
+const Button = ({ title, type, onLoadMore, btnLoadMoreDisabled }) => {
+  const hendelClick = () => {
+    onLoadMore();
+  };
+
   return (
     <button
-      className={type === 'button' ? style.buttonButton : style.button}
+      className={style.Button}
       type={type}
       onClick={hendelClick}
+      disabled={btnLoadMoreDisabled}
     >
       {title}
     </button>
@@ -17,15 +21,14 @@ const Button = ({ title, type, id, onDelete }) => {
 Button.defaultProps = {
   title: 'button',
   type: 'button',
-  id: '',
-  onDelete: () => {},
+  onLoadMore: () => {},
 };
 
 Button.propTypes = {
   title: PropTypes.string,
   type: PropTypes.string,
-  id: PropTypes.string,
-  onDelete: PropTypes.func,
+  onLoadMore: PropTypes.func,
+  btnLoadMoreDisabled: PropTypes.bool.isRequired,
 };
 
 export default Button;

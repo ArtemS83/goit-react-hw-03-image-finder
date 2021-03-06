@@ -1,1 +1,1 @@
-export { default } from './ContactsInputForm';
+export { default } from './Searchbar';
